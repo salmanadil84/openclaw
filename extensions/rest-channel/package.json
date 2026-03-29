@@ -1,0 +1,45 @@
+{
+  "name": "@openclaw/rest-channel",
+  "version": "2026.3.29",
+  "description": "OpenClaw REST channel plugin — bidirectional messaging over custom RESTful APIs",
+  "type": "module",
+  "devDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.29"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "setupEntry": "./setup-entry.ts",
+    "channel": {
+      "id": "rest-channel",
+      "label": "REST Channel",
+      "selectionLabel": "REST Channel (custom HTTP)",
+      "docsPath": "/channels/rest-channel",
+      "docsLabel": "rest-channel",
+      "blurb": "Bidirectional messaging over any HTTP/REST API.",
+      "aliases": [
+        "rest",
+        "http-channel"
+      ],
+      "order": 90,
+      "quickstartAllowFrom": true
+    },
+    "install": {
+      "npmSpec": "@openclaw/rest-channel",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.3.29"
+    },
+    "release": {
+      "publishToNpm": true
+    }
+  }
+}

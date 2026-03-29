@@ -680,6 +680,10 @@
       "types": "./dist/plugin-sdk/nextcloud-talk.d.ts",
       "default": "./dist/plugin-sdk/nextcloud-talk.js"
     },
+    "./plugin-sdk/rest-channel": {
+      "types": "./dist/plugin-sdk/rest-channel.d.ts",
+      "default": "./dist/plugin-sdk/rest-channel.js"
+    },
     "./plugin-sdk/nvidia": {
       "types": "./dist/plugin-sdk/nvidia.d.ts",
       "default": "./dist/plugin-sdk/nvidia.js"
