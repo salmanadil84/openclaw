@@ -255,6 +255,12 @@ export function createRestChannelWebhookServer(opts: RestChannelWebhookServerOpt
   return { server, start, stop };
 }
 
+const NOOP_RUNTIME: RuntimeEnv = {
+  log: () => {},
+  error: () => {},
+  exit: () => {},
+};
+
 export type RestChannelMonitorOptions = {
   accountId?: string;
   config?: CoreConfig;
@@ -269,7 +275,7 @@ export async function monitorRestChannelProvider(
   const core = getRestChannelRuntime();
   const cfg = opts.config ?? (core.config.loadConfig() as CoreConfig);
   const account = resolveRestChannelAccount({ cfg, accountId: opts.accountId });
-  const runtime = opts.runtime ?? core.logging.getChildLogger();
+  const runtime = opts.runtime ?? NOOP_RUNTIME;
 
   const port = account.config.webhookPort ?? DEFAULT_WEBHOOK_PORT;
   const host = account.config.webhookHost ?? DEFAULT_WEBHOOK_HOST;

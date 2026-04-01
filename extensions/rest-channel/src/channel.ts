@@ -28,7 +28,6 @@ import {
   looksLikeRestChannelTargetId,
   normalizeRestChannelMessagingTarget,
 } from "./normalize.js";
-import { getRestChannelRuntime } from "./runtime.js";
 import { sendMessageRestChannel } from "./send.js";
 import type { CoreConfig } from "./types.js";
 
