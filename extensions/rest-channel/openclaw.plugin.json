@@ -1,0 +1,9 @@
+{
+  "id": "rest-channel",
+  "channels": ["rest-channel"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
